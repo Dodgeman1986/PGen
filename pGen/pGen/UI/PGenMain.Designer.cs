@@ -36,7 +36,7 @@
             this.chkCapitalize = new System.Windows.Forms.CheckBox();
             this.cboNumberWords = new System.Windows.Forms.ComboBox();
             this.cboNumberDigits = new System.Windows.Forms.ComboBox();
-            this.btnGenerate = new System.Windows.Forms.Button();
+            this.BtnGenerate = new System.Windows.Forms.Button();
             this.lblNumberWords = new System.Windows.Forms.Label();
             this.lblNumberDigits = new System.Windows.Forms.Label();
             this.msPGen.SuspendLayout();
@@ -46,9 +46,10 @@
             // 
             this.txtGeneratedPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGeneratedPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGeneratedPassword.Location = new System.Drawing.Point(12, 42);
             this.txtGeneratedPassword.Name = "txtGeneratedPassword";
-            this.txtGeneratedPassword.Size = new System.Drawing.Size(410, 20);
+            this.txtGeneratedPassword.Size = new System.Drawing.Size(410, 32);
             this.txtGeneratedPassword.TabIndex = 0;
             // 
             // msPGen
@@ -75,17 +76,19 @@
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
             // 
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
             this.infoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.infoToolStripMenuItem.Text = "Info";
+            this.infoToolStripMenuItem.Click += new System.EventHandler(this.InfoToolStripMenuItem_Click);
             // 
             // chkCapitalize
             // 
             this.chkCapitalize.AutoSize = true;
-            this.chkCapitalize.Location = new System.Drawing.Point(12, 123);
+            this.chkCapitalize.Location = new System.Drawing.Point(12, 135);
             this.chkCapitalize.Name = "chkCapitalize";
             this.chkCapitalize.Size = new System.Drawing.Size(71, 17);
             this.chkCapitalize.TabIndex = 2;
@@ -95,7 +98,7 @@
             // cboNumberWords
             // 
             this.cboNumberWords.FormattingEnabled = true;
-            this.cboNumberWords.Location = new System.Drawing.Point(12, 68);
+            this.cboNumberWords.Location = new System.Drawing.Point(12, 80);
             this.cboNumberWords.Name = "cboNumberWords";
             this.cboNumberWords.Size = new System.Drawing.Size(121, 21);
             this.cboNumberWords.TabIndex = 3;
@@ -103,24 +106,25 @@
             // cboNumberDigits
             // 
             this.cboNumberDigits.FormattingEnabled = true;
-            this.cboNumberDigits.Location = new System.Drawing.Point(12, 96);
+            this.cboNumberDigits.Location = new System.Drawing.Point(12, 108);
             this.cboNumberDigits.Name = "cboNumberDigits";
             this.cboNumberDigits.Size = new System.Drawing.Size(121, 21);
             this.cboNumberDigits.TabIndex = 4;
             // 
-            // btnGenerate
+            // BtnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(160, 189);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(115, 37);
-            this.btnGenerate.TabIndex = 5;
-            this.btnGenerate.Text = "Generate";
-            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.BtnGenerate.Location = new System.Drawing.Point(160, 189);
+            this.BtnGenerate.Name = "BtnGenerate";
+            this.BtnGenerate.Size = new System.Drawing.Size(115, 37);
+            this.BtnGenerate.TabIndex = 5;
+            this.BtnGenerate.Text = "Generate";
+            this.BtnGenerate.UseVisualStyleBackColor = true;
+            this.BtnGenerate.Click += new System.EventHandler(this.BtnGenerate_Click);
             // 
             // lblNumberWords
             // 
             this.lblNumberWords.AutoSize = true;
-            this.lblNumberWords.Location = new System.Drawing.Point(141, 72);
+            this.lblNumberWords.Location = new System.Drawing.Point(139, 84);
             this.lblNumberWords.Name = "lblNumberWords";
             this.lblNumberWords.Size = new System.Drawing.Size(87, 13);
             this.lblNumberWords.TabIndex = 6;
@@ -129,7 +133,7 @@
             // lblNumberDigits
             // 
             this.lblNumberDigits.AutoSize = true;
-            this.lblNumberDigits.Location = new System.Drawing.Point(142, 100);
+            this.lblNumberDigits.Location = new System.Drawing.Point(139, 113);
             this.lblNumberDigits.Name = "lblNumberDigits";
             this.lblNumberDigits.Size = new System.Drawing.Size(83, 13);
             this.lblNumberDigits.TabIndex = 7;
@@ -142,7 +146,7 @@
             this.ClientSize = new System.Drawing.Size(434, 261);
             this.Controls.Add(this.lblNumberDigits);
             this.Controls.Add(this.lblNumberWords);
-            this.Controls.Add(this.btnGenerate);
+            this.Controls.Add(this.BtnGenerate);
             this.Controls.Add(this.cboNumberDigits);
             this.Controls.Add(this.cboNumberWords);
             this.Controls.Add(this.chkCapitalize);
@@ -171,7 +175,7 @@
         private System.Windows.Forms.CheckBox chkCapitalize;
         private System.Windows.Forms.ComboBox cboNumberWords;
         private System.Windows.Forms.ComboBox cboNumberDigits;
-        private System.Windows.Forms.Button btnGenerate;
+        private System.Windows.Forms.Button BtnGenerate;
         private System.Windows.Forms.Label lblNumberWords;
         private System.Windows.Forms.Label lblNumberDigits;
     }
